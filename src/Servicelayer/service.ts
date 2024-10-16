@@ -17,7 +17,7 @@ class Authservice{
        }
         
     }
-    async loginUser(email:string,password:string):Promise<Boolean|undefined>{
+    async loginUser(email:string,password:string):Promise<object|unknown>{
         try{
             const user=await this.userRepostry.findByemail(email,password)
             return user

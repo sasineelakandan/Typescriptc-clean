@@ -32,12 +32,12 @@ class userRepostry{
          console.log(err)
        }
     }
-    async findByemail(email:string,password:string):Promise<Boolean|undefined>{
+    async findByemail(email:string,password:string):Promise<object|unknown>{
         const user=await User.findOne({email})
         
         const userpassword = await this.hashutils.isMatch(password, user?.password as string);
-
-        return userpassword
+        
+        return user
     }
 }
 
