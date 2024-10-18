@@ -1,6 +1,8 @@
 
 
 
+
+import { login, signup } from "../Interface/Interface";
 import userRepostry from "../Repostrylayer/userRepostry";
 
 class Authservice{
@@ -17,7 +19,9 @@ class Authservice{
        }
         
     }
-    async loginUser(email:string,password:string):Promise<object|unknown>{
+    async loginUser(email:string,password:string):Promise<Object|undefined>{
+                  
+      
         try{
             const user=await this.userRepostry.findByemail(email,password)
             return user

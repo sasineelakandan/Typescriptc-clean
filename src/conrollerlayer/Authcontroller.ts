@@ -18,7 +18,7 @@ class AuthController {
 
      signup=async (req: Request, res: Response, next: NextFunction): Promise<void> =>{
         try {
-            const { name, email, phone, password }: signup = req.body;
+            const { name, email, phone, password }= req.body;
 
     
             const user = await this.authservice.signupuser(name, email, phone, password);

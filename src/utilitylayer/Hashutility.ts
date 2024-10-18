@@ -11,7 +11,7 @@ class Hashutils{
   async isMatch(password:string,userpassword:string):Promise<Boolean|undefined>{
     try{
        const passwordver=await compare(password,userpassword)
-       console.log(passwordver)
+       
        return passwordver
     }catch(err){
         console.log(err)

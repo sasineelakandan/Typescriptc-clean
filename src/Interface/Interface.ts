@@ -1,13 +1,14 @@
-export interface signup{
+export type signup={
     name:string,
     email:string,
     phone:number,
     password:string
 }
 
-export interface login{
+export type login={
     email:string,
    password:string
 }
+
 
 
